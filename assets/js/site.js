@@ -73,7 +73,9 @@ function updateServerStatus(lastEntry) {
 
     var keys = Object.keys(lastPlayerEntries);
     var totalPlayers = 0;
-    var mainNetworkPlayers = lastPlayerEntries["Minehut"];
+    var mainNetworkPlayers = 0;
+
+    mainNetworkPlayers += lastPlayerEntries["Minehut"];
 
     for (var i = 0; i < keys.length; i++) {
         totalPlayers += lastPlayerEntries[keys[i]];
@@ -370,7 +372,7 @@ $(document).ready(function() {
                 listing: listing,
                 plot: $.plot('#chart_' + safeName(info.name), [listing], smallChartOptions)
             };
-            
+
             console.log('received entry: ' + lastEntry.info.name);
 
             updateServerStatus(lastEntry);
