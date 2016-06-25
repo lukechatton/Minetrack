@@ -73,7 +73,7 @@ function updateServerStatus(lastEntry) {
 
     var keys = Object.keys(lastPlayerEntries);
     var totalPlayers = 0;
-    var mainNetworkPlayers = lastPlayerEntries[config.mainNetwork];
+    var mainNetworkPlayers = lastPlayerEntries["Minehut"];
 
     for (var i = 0; i < keys.length; i++) {
         totalPlayers += lastPlayerEntries[keys[i]];
