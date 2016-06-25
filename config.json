@@ -43,5 +43,6 @@
 			0
 		]
 	},
-	"categoriesVisible": true
+	"categoriesVisible": true,
+	"mainNetwork": "Minehut"
 }
