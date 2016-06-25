@@ -73,12 +73,14 @@ function updateServerStatus(lastEntry) {
 
     var keys = Object.keys(lastPlayerEntries);
     var totalPlayers = 0;
+    var mainNetworkPlayers = lastPlayerEntries[keys[0]];
 
     for (var i = 0; i < keys.length; i++) {
         totalPlayers += lastPlayerEntries[keys[i]];
     }
 
     $("#stat_totalPlayers").text(formatNumber(totalPlayers));
+    $("#stat_mainNetworkPlayers").text(formatNumber(mainNetworkPlayers));
     $("#stat_networks").text(formatNumber(keys.length));
 }
 
