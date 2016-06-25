@@ -370,6 +370,8 @@ $(document).ready(function() {
                 listing: listing,
                 plot: $.plot('#chart_' + safeName(info.name), [listing], smallChartOptions)
             };
+            
+            console.log('received entry: ' + lastEntry.info.name);
 
             updateServerStatus(lastEntry);
 
